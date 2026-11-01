@@ -41,7 +41,7 @@ function Keyboard() {
 
 export function Index() {
   const [modalOpen, setModalOpen] = useState(false);
-  return <main>
+  return <main className="pb-20 sm:pb-0">
     <div className="flex items-center justify-center gap-2 border-b border-notice-border bg-notice px-4 py-2.5 text-center text-xs font-medium leading-relaxed text-notice-foreground sm:text-sm">
       <TriangleAlert className="size-4 shrink-0" aria-hidden="true" /><span><strong>Atenção:</strong> {notice}</span>
     </div>
@@ -49,8 +49,8 @@ export function Index() {
     <header className="bg-stage px-4 pb-14 pt-10 text-stage-foreground sm:px-6 sm:pb-16 sm:pt-12">
       <div className="mx-auto max-w-5xl text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-xs font-semibold uppercase text-primary"><FileText className="size-3.5" />Guia digital em PDF</span>
-        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Piano do Zero — <span className="font-normal italic text-primary">A Tua Primeira Melodia</span></h1>
-        <p className="mx-auto mt-5 max-w-2xl text-lg font-light leading-relaxed text-stage-muted sm:text-xl">Reconhece as notas, entende o padrão do teclado e organiza os primeiros momentos de prática com um guia ilustrado pensado para iniciantes.</p>
+        <h1 className="mx-auto mt-6 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">Piano do Zero — <span className="font-normal italic text-primary">A Tua Primeira Melodia</span></h1>
+        <p className="mx-auto mt-5 max-w-2xl text-base font-light leading-relaxed text-stage-muted sm:text-xl">Já tens piano ou teclado, mas ainda não sabes bem por onde começar? Este guia ilustrado organiza os primeiros conceitos e exercícios numa sequência simples.</p>
         <figure className="piano-photo relative mx-auto mt-8 max-w-4xl overflow-hidden rounded-lg">
           <img src={pianoPhoto} alt="Imagem ilustrativa de mãos a praticar num piano acústico" width={1536} height={1024} fetchPriority="high" className="h-60 w-full object-cover sm:h-80 lg:h-[360px]" />
           <figcaption className="photo-caption absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 px-5 pb-5 pt-14 text-left text-xs text-stage-foreground"><span className="flex items-center gap-2"><Music2 className="size-4 text-primary" />Aprende no teu próprio ritmo</span><span className="hidden sm:block">Ideal para teclado ou piano</span></figcaption>
@@ -70,15 +70,28 @@ export function Index() {
           <h2 className="mb-7 text-3xl font-bold sm:text-4xl">Saber por onde começar faz diferença.</h2>
           <div className="space-y-4">
             {[
-              [Grid2X2, "Localiza as notas no teclado sem tentar decorar tudo de uma vez."],
-              [CalendarX2, "Segue uma sequência de prática em vez de juntar dicas soltas."],
-              [Shuffle, "Liga o reconhecimento das notas aos primeiros exercícios e a uma melodia didática."],
+              [Grid2X2, "Usa o padrão das teclas para encontrar o Dó e reconhecer as sete notas."],
+              [CalendarX2, "Percorre seis etapas de conteúdo e consulta a proposta de prática em sete sessões."],
+              [Shuffle, "Passa do reconhecimento das notas a exercícios simples e a uma melodia didática original."],
             ].map(([Icon, text]) => { const Symbol = Icon as typeof Grid2X2; return <div key={String(text)} className="flex items-start gap-4 rounded-lg border border-border bg-card p-5"><span className="rounded-lg bg-notice p-3 text-accent-foreground"><Symbol className="size-5" /></span><p className="pt-1 text-sm font-medium leading-relaxed sm:text-base">{String(text)}</p></div>; })}
           </div>
         </div>
-        <figure className="relative overflow-hidden rounded-lg lg:col-span-5">
-          <img src={pianoPhoto} width={1536} height={1024} loading="lazy" alt="Pormenor ilustrativo da prática ao piano" className="h-80 w-full object-cover sm:h-[360px]" />
-          <figcaption className="photo-caption absolute inset-x-0 bottom-0 px-6 pb-6 pt-20 text-center font-display text-sm italic leading-relaxed text-stage-foreground">Seis etapas ilustradas organizam os primeiros conceitos e exercícios do guia.</figcaption>
+        <figure className="overflow-hidden rounded-xl border border-border bg-stage p-5 text-stage-foreground shadow-sm sm:p-7 lg:col-span-5">
+          <figcaption className="mb-5">
+            <span className="text-xs font-semibold uppercase tracking-wide text-primary">Um ponto de referência</span>
+            <p className="mt-2 font-display text-xl font-bold sm:text-2xl">O grupo de duas teclas pretas ajuda a localizar o Dó.</p>
+          </figcaption>
+          <svg viewBox="0 0 640 270" className="h-auto w-full" role="img" aria-label="Ilustração de um teclado com a tecla Dó destacada junto a um grupo de duas teclas pretas">
+            <rect x="18" y="44" width="604" height="194" rx="12" className="fill-stage-soft" />
+            {Array.from({ length: 8 }, (_, i) => <rect key={i} x={34 + i * 71} y="88" width="70" height="132" rx="5" className={i === 0 ? "fill-primary stroke-primary" : "fill-card stroke-border"} strokeWidth="2" />)}
+            {[0, 1, 3, 4, 5].map(i => <rect key={i} x={83 + i * 71} y="88" width="42" height="82" rx="4" className="fill-foreground" />)}
+            <rect x="35" y="88" width="69" height="132" rx="5" fill="none" className="stroke-primary" strokeWidth="4" />
+            <text x="69" y="205" textAnchor="middle" className="fill-stage text-sm font-bold">Dó</text>
+            <path d="M70 76V52H150" fill="none" className="stroke-primary" strokeWidth="3" />
+            <circle cx="70" cy="77" r="5" className="fill-primary" />
+            <text x="158" y="57" className="fill-stage-foreground text-sm">Começa pelo grupo de duas teclas pretas</text>
+          </svg>
+          <p className="mt-4 text-sm leading-relaxed text-stage-muted">A ilustração explica uma das referências visuais apresentadas no guia.</p>
         </figure>
       </div>
     </section>
@@ -136,5 +149,12 @@ export function Index() {
       <DialogDescription className="leading-relaxed">O checkout está em pré-visualização. Poderás concluir a compra depois da aprovação do produto.</DialogDescription>
       <DialogClose asChild><Button className="h-12 w-full bg-stage font-semibold text-stage-foreground hover:bg-stage-soft">Entendido</Button></DialogClose>
     </DialogContent></Dialog>
+
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-stage-muted/20 bg-stage/95 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-stage-foreground shadow-lg backdrop-blur sm:hidden">
+      <div className="mx-auto flex max-w-lg items-center gap-3">
+        <p className="min-w-0 flex-1 text-xs leading-tight text-stage-muted"><span className="block text-sm font-bold text-stage-foreground">{price}</span>Guia digital em PDF</p>
+        <Button onClick={() => setModalOpen(true)} className="min-h-11 shrink-0 px-4 text-sm font-semibold">Ver disponibilidade</Button>
+      </div>
+    </div>
   </main>;
 }
