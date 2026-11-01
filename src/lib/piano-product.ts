@@ -6,26 +6,36 @@ export const product = {
 } as const;
 
 export const steps = [
-  ["Conhecer o teclado", "Perceber o padrão das teclas brancas e pretas."],
-  ["Encontrar o Dó", "Usar os grupos de duas teclas pretas como referência."],
-  ["Nomear as notas", "Dó, Ré, Mi, Fá, Sol, Lá, Si — localizar cada uma no instrumento."],
-  ["Postura e dedos", "Posição das mãos e numeração dos dedos."],
-  ["A tua primeira melodia", "Tocar uma melodia didática original, passo a passo."],
-  ["Apoio da mão esquerda", "Um exercício simples para acompanhar a melodia."],
+  ["Conhecer o teclado", "Entende o padrão que se repete nas teclas brancas e pretas."],
+  ["Encontrar o Dó", "Usa os grupos de duas teclas pretas como referência para localizar o Dó."],
+  ["Nomear as notas", "Identifica Dó, Ré, Mi, Fá, Sol, Lá e Si no instrumento."],
+  ["Postura e dedos", "Conhece a posição das mãos e a numeração dos dedos."],
+  ["A tua primeira melodia", "Pratica uma melodia didática original, seguindo as indicações do guia."],
+  ["Apoio da mão esquerda", "Explora um exercício simples para acompanhar a melodia com a mão esquerda."],
 ];
 
 export const included = [
-  "Guia digital em PDF", "Seis etapas ilustradas", "Exercícios simples",
-  "Uma melodia didática original", "Um exercício de apoio com a mão esquerda",
-  "Plano sugerido de prática",
+  "Guia digital ilustrado em PDF",
+  "Seis etapas ilustradas",
+  "Exercícios simples para praticar",
+  "Uma melodia didática original",
+  "Um exercício de apoio para a mão esquerda",
+  "Plano sugerido de prática em sete sessões",
 ];
-export const notIncluded = ["Vídeo ou áudio", "Aulas presenciais ou online", "Acompanhamento individual", "Comunidade fechada", "Certificado de conclusão"];
+
+export const notIncluded = [
+  "Vídeos ou áudio",
+  "Aulas presenciais ou online",
+  "Acompanhamento individual",
+  "Acesso a comunidade fechada",
+  "Certificado de conclusão",
+];
 
 export const faqs = [
-  ["Preciso de ter piano ou teclado?", "Sim. Para aplicar os ensinamentos do guia, é fundamental que tenhas acesso a um instrumento — piano acústico, digital ou teclado — para praticar as posições e exercícios."],
-  ["Preciso de saber música?", "Não. O guia começa do zero, sem exigir conhecimentos prévios de teoria musical ou leitura de pauta."],
-  ["Vou aprender a tocar rapidamente?", "O guia organiza os primeiros passos em seis etapas. Não promete domínio rápido nem resultados garantidos. O tempo de aprendizagem depende do teu ritmo de prática e dedicação."],
-  ["Em que formato recebo?", "O material é um ficheiro digital em PDF. Podes ler no teu telemóvel, tablet ou computador, ou imprimir se preferires."],
-  ["Inclui vídeos ou aulas?", "Não. Trata-se exclusivamente de um guia digital em PDF com explicações ilustradas passo a passo. Não inclui áudio, aulas, acompanhamento individual, comunidade nem certificado."],
-  ["Já posso comprar?", "O checkout está em pré-visualização e o produto pode ainda estar em revisão. Os pagamentos só ficam disponíveis após a aprovação do produto."],
+  ["Preciso de um piano ou teclado?", "Sim. Para praticar o reconhecimento das notas e os exercícios, precisas de acesso a um instrumento: piano acústico, piano digital ou teclado."],
+  ["É necessário saber teoria musical?", "Não. O guia começa pelo reconhecimento do teclado e das notas, com uma sequência pensada para quem está a iniciar."],
+  ["Em quanto tempo vou conseguir tocar uma melodia?", "O guia inclui uma melodia didática e um plano sugerido de prática em sete sessões. Cada pessoa pratica a um ritmo diferente; o material não garante um prazo nem um resultado específico."],
+  ["Em que formato recebo o guia?", "O produto é um guia digital em PDF, que podes consultar num telemóvel, tablet ou computador."],
+  ["O guia inclui aulas ou vídeos?", "Não. A oferta é exclusivamente do guia digital em PDF. Não inclui vídeos, áudio, aulas, acompanhamento individual, comunidade nem certificado."],
+  ["Posso comprar agora?", "Ainda não. O checkout está em pré-visualização. A compra ficará disponível depois da aprovação do produto."],
 ];
