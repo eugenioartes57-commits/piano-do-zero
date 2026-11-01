@@ -28,3 +28,8 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+
+## Continuidade noutra conta
+
+Para retomar o trabalho noutra conta Lovable/ChatGPT, consulta [CONTEXTO-PARA-NOVA-CONTA.md](CONTEXTO-PARA-NOVA-CONTA.md). O guia descreve o estado do projeto, os factos confirmados do produto e como importar o código para um novo workspace sem incluir credenciais.
