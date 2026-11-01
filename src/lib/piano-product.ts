@@ -6,12 +6,12 @@ export const product = {
 } as const;
 
 export const steps = [
-  ["Conhecer o teclado", "Entende o padrão que se repete nas teclas brancas e pretas."],
-  ["Encontrar o Dó", "Usa os grupos de duas teclas pretas como referência para localizar o Dó."],
-  ["Nomear as notas", "Identifica Dó, Ré, Mi, Fá, Sol, Lá e Si no instrumento."],
-  ["Postura e dedos", "Conhece a posição das mãos e a numeração dos dedos."],
-  ["A tua primeira melodia", "Pratica uma melodia didática original, seguindo as indicações do guia."],
-  ["Apoio da mão esquerda", "Explora um exercício simples para acompanhar a melodia com a mão esquerda."],
+  ["Reconhecer o padrão do teclado", "Observa como as teclas brancas e pretas se repetem ao longo do instrumento."],
+  ["Usar as teclas pretas como referência", "Encontra o Dó a partir dos grupos de duas teclas pretas."],
+  ["Identificar as sete notas", "Localiza e nomeia Dó, Ré, Mi, Fá, Sol, Lá e Si."],
+  ["Preparar postura e dedos", "Conhece a posição das mãos e a numeração indicada para os dedos."],
+  ["Experimentar uma melodia guiada", "Segue as indicações do PDF para praticar uma melodia didática original."],
+  ["Conhecer o apoio da mão esquerda", "Experimenta um exercício simples de apoio com a mão esquerda."],
 ];
 
 export const included = [
@@ -36,6 +36,7 @@ export const faqs = [
   ["É necessário saber teoria musical?", "Não. O guia começa pelo reconhecimento do teclado e das notas, com uma sequência pensada para quem está a iniciar."],
   ["Em quanto tempo vou conseguir tocar uma melodia?", "O guia inclui uma melodia didática e um plano sugerido de prática em sete sessões. Cada pessoa pratica a um ritmo diferente; o material não garante um prazo nem um resultado específico."],
   ["Em que formato recebo o guia?", "O produto é um guia digital em PDF, que podes consultar num telemóvel, tablet ou computador."],
+  ["Como está organizado o plano de prática?", "Além das seis etapas de conteúdo, o PDF propõe sete sessões de prática. São uma sugestão para organizar o estudo, e podes adaptá-las ao teu ritmo."],
   ["O guia inclui aulas ou vídeos?", "Não. A oferta é exclusivamente do guia digital em PDF. Não inclui vídeos, áudio, aulas, acompanhamento individual, comunidade nem certificado."],
   ["Posso comprar agora?", "Ainda não. O checkout está em pré-visualização. A compra ficará disponível depois da aprovação do produto."],
 ];
