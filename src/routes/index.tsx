@@ -47,18 +47,42 @@ export function Index() {
     </div>
 
     <header className="bg-stage px-4 pb-14 pt-10 text-stage-foreground sm:px-6 sm:pb-16 sm:pt-12">
-      <div className="mx-auto max-w-5xl text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-xs font-semibold uppercase text-primary"><FileText className="size-3.5" />Guia digital em PDF</span>
-        <h1 className="mx-auto mt-6 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">Piano do Zero — <span className="font-normal italic text-primary">A Tua Primeira Melodia</span></h1>
-        <p className="mx-auto mt-5 max-w-2xl text-base font-light leading-relaxed text-stage-muted sm:text-xl">Já tens piano ou teclado, mas ainda não sabes bem por onde começar? Este guia ilustrado organiza os primeiros conceitos e exercícios numa sequência simples.</p>
-        <figure className="piano-photo relative mx-auto mt-8 max-w-4xl overflow-hidden rounded-lg">
-          <img src={pianoPhoto} alt="Imagem ilustrativa de mãos a praticar num piano acústico" width={1536} height={1024} fetchPriority="high" className="h-60 w-full object-cover sm:h-80 lg:h-[360px]" />
-          <figcaption className="photo-caption absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 px-5 pb-5 pt-14 text-left text-xs text-stage-foreground"><span className="flex items-center gap-2"><Music2 className="size-4 text-primary" />Aprende no teu próprio ritmo</span><span className="hidden sm:block">Ideal para teclado ou piano</span></figcaption>
-        </figure>
-        <div className="mx-auto mt-8 max-w-md">
-          <p className="mb-5 flex flex-wrap items-baseline justify-center gap-2"><span className="text-3xl font-extrabold sm:text-4xl">{price}</span><span className="text-sm text-stage-muted">/ pagamento único</span></p>
-          <Button asChild className="h-auto min-h-14 w-full whitespace-normal px-5 py-4 text-base font-semibold"><a href="#comprar">Ver a oferta — {price}<ArrowRight /></a></Button>
-          <p className="mt-4 text-xs text-stage-muted">Compra disponível após a aprovação do produto</p>
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+        <div className="space-y-6 lg:col-span-7">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-xs font-semibold uppercase text-primary"><FileText className="size-3.5" />Guia digital ilustrado em PDF</span>
+          <h1 className="max-w-2xl text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Já tens piano ou teclado, mas ainda não sabes por onde começar?</h1>
+          <p className="max-w-2xl text-base font-light leading-relaxed text-stage-muted sm:text-lg">Este guia ilustrado organiza as primeiras noções do teclado e propõe exercícios simples para orientar os teus primeiros momentos de prática.</p>
+
+          <div className="flex flex-wrap items-end gap-x-5 gap-y-2">
+            <p><span className="block text-xs font-medium text-stage-muted">Pagamento único</span><span className="text-3xl font-extrabold sm:text-4xl">{price}</span></p>
+            <span className="mb-1 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary"><FileText className="size-3.5" />Formato PDF</span>
+          </div>
+
+          <div className="max-w-md">
+            <Button asChild className="h-auto min-h-14 w-full whitespace-normal px-5 py-4 text-base font-semibold"><a href="#comprar">Ver disponibilidade <ArrowRight /></a></Button>
+            <p className="mt-3 text-xs leading-relaxed text-stage-muted">O checkout está em pré-visualização. A compra depende da aprovação do produto.</p>
+          </div>
+        </div>
+
+        <div className="mx-auto w-full max-w-sm lg:col-span-5">
+          <div className="relative rounded-2xl border border-stage-muted/20 bg-stage-soft p-5 shadow-xl sm:p-7">
+            <span className="absolute -top-3 right-5 rounded-full border border-primary/30 bg-stage px-3 py-1 text-xs font-semibold text-primary">Representação ilustrativa</span>
+            <div className="border-b border-stage-muted/20 pb-4 pt-2 text-center">
+              <div className="mx-auto mb-3 flex size-12 items-center justify-center rounded-xl bg-primary/15 text-primary"><Music2 className="size-6" aria-hidden="true" /></div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-stage-muted">Piano do Zero</p>
+              <h2 className="mt-1 font-display text-xl font-bold sm:text-2xl">A Tua Primeira Melodia</h2>
+              <p className="mt-2 text-xs text-stage-muted">Guia introdutório para piano e teclado</p>
+            </div>
+            <ul className="mt-5 space-y-3">
+              {[
+                "Seis etapas de conteúdo ilustradas",
+                "Exercícios simples e uma melodia didática original",
+                "Um exercício de apoio para a mão esquerda",
+                "Plano sugerido de prática em sete sessões",
+              ].map(item => <li key={item} className="flex items-start gap-3 rounded-lg border border-stage-muted/10 bg-stage/60 p-3 text-sm leading-relaxed"><Check className="mt-0.5 size-4 shrink-0 text-primary" /><span>{item}</span></li>)}
+            </ul>
+            <p className="mt-4 text-center text-xs leading-relaxed text-stage-muted">A amostra real do PDF ainda não está disponível.</p>
+          </div>
         </div>
       </div>
     </header>
